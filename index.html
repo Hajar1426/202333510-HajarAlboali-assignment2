@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hajar Alboali | Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Hajar Alboali</h2>
+
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h1>Hi, I'm Hajar!</h1>
+            <p class="tagline">Software Engineering Student</p>
+
+            <p>
+                I am a Software Engineering student with an interest
+                in developing creative and interactive software. I enjoy learning
+                new technologies and applying what I learn through university
+                projects.
+            </p>
+
+            <p>
+                Outside of programming, I prefer winter over summer and my
+                favorite colors are blue and grey.
+            </p>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="projects-container">
+
+                <article class="project-card">
+
+                    <img
+                            src="assets/images/images.png"
+                            alt="Database Management System project"
+                            class="project-image"
+                    >
+                    <h3>Database Management System</h3>
+
+                    <p>
+                        A database project developed for ICS 321 with a teammate.
+                        We designed and built a relational database using SQL and
+                        integrated it with a Java application.
+                    </p>
+                </article>
+
+
+                <article class="project-card">
+
+                    <img
+                            src="assets/images/backend-java.png"
+                            alt="Interactive Star Game project"
+                            class="project-image"
+                    >
+                    <h3>Interactive Star Game</h3>
+
+                    <p>
+                        An interactive game developed entirely in Java. The game
+                        includes a multicolored star, and the player must match
+                        the ball with the corresponding color of the star.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <div class="contact-info">
+                <p>
+                    Email:
+
+                        hajar142@gmail.com
+
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/Hajar1426" target="_blank">
+                        GitHub Profile
+                    </a>
+                </p>
+
+                <p>
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/in/hajar-alboali-b69744285?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
+                        LinkedIn Profile
+                    </a>
+                </p>
+            </div>
+
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hajar Alboali</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
