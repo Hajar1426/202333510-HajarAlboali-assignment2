@@ -1,22 +1,25 @@
-# Technical Documentation
+# Technical Documentation — Assignment 2
 
-## Project Overview
+## 1. Project Overview
 
-This project is a responsive personal portfolio website developed for SWE 363 Assignment 1. The website introduces me, presents some of my previous projects, and provides visitors with ways to contact me.
+This project is an interactive and responsive personal portfolio website developed for SWE 363 Assignment 2.
 
-The portfolio was developed using HTML, CSS, and JavaScript and was designed to work across different screen sizes.
+The website builds upon Assignment 1 by adding dynamic content, improved form feedback, and animations to enhance the user experience.
 
-## Technologies Used
+The portfolio introduces me as a Software Engineering student, showcases my previous projects, and provides visitors with ways to contact me.
 
-- HTML5 for the structure and content of the website
-- CSS3 for styling and responsive design
-- JavaScript for user interaction
-- Git and GitHub for version control and repository management
-- IntelliJ IDEA as the development environment
+## 2. Technologies Used
 
-## Project Structure
+- **HTML5:** Website structure and content.
+- **CSS3:** Styling, responsive layouts, and animations.
+- **JavaScript:** Dynamic content, form handling, and user interactions.
+- **Git and GitHub:** Version control and repository management.
+- **IntelliJ IDEA:** Development environment.
+
+## 3. Project Structure
 
 ```text
+202333510-HajarAlboali-assignment2/
 ├── index.html
 ├── css/
 │   └── styles.css
@@ -31,96 +34,157 @@ The portfolio was developed using HTML, CSS, and JavaScript and was designed to 
 └── .gitignore
 ```
 
-## Website Sections
+## 4. Website Sections
 
 ### About Me
 
-The About Me section contains a short introduction about me as a Software Engineering student and some of my personal interests.
-
-It also includes a short tagline that introduces my field of study.
+Introduces me as a Software Engineering student and provides information about my interests.
 
 ### Projects
 
-The Projects section presents two previous university projects:
+Displays two university projects:
 
-1. **Database Management System** – A relational database developed using SQL and integrated with a Java application.
-2. **Interactive Star Game** – An interactive game developed entirely in Java.
+1. **Database Management System:** A relational database developed using SQL and integrated with Java.
+2. **Interactive Star Game:** An interactive game developed entirely in Java.
 
-CSS Grid is used to display the project cards. Each project also includes an image representing the technologies used.
-
-On larger screens, the two project cards are displayed side by side. On smaller screens, they are displayed vertically.
+Each project includes an image, title, and description.
 
 ### Contact
 
-The Contact section provides my email, GitHub, and LinkedIn information.
+Provides contact information and a form containing Name, Email, and Message fields.
 
-It also includes a contact form where visitors can enter:
+## 5. Dynamic Content — Live Project Search
+
+A live search feature was added to the Projects section using JavaScript.
+
+Visitors can type keywords into the search field to filter the displayed project cards.
+
+The feature works by:
+
+1. Detecting input using the JavaScript `input` event.
+2. Converting the search text to lowercase.
+3. Comparing the entered text with the project cards' content.
+4. Showing matching projects and hiding nonmatching projects.
+5. Displaying a message when no projects match the search.
+
+For example:
+
+- Searching for `SQL` displays the Database Management System project.
+- Searching for `Star` displays the Interactive Star Game project.
+- Searching for `Python` displays a message indicating that no projects were found.
+
+This feature improves navigation and allows visitors to find relevant projects quickly.
+
+## 6. Data Handling and Form Validation
+
+The website uses a contact form to demonstrate basic data handling with JavaScript.
+
+The form includes three required fields:
 
 - Name
 - Email
 - Message
 
-HTML form validation is implemented using the `required` attribute and the `email` input type. This prevents the form from being submitted when required fields are empty or when the email does not follow a valid email format.
+HTML validation prevents submission when required fields are empty or when the email format is invalid.
 
-The assignment does not require a backend, so the form does not send the information to a server.
+JavaScript listens for the form's `submit` event and prevents the default submission behavior using `event.preventDefault()`.
 
-## JavaScript Functionality
+After valid submission:
 
-JavaScript is used to add interactivity to the contact form.
-
-An event listener detects when the visitor submits the form. The default form submission behavior is prevented because the website does not use a backend.
-
-After a valid form submission:
-
-1. A confirmation message is displayed to the visitor.
+1. A confirmation message appears on the webpage.
 2. The form fields are cleared.
 
-This provides feedback to the visitor while keeping the implementation appropriate for a front-end-only website.
+The website does not use a backend, so messages are not actually sent or stored.
 
-## Responsive Design
+## 7. Error Handling and User Feedback
 
-The website was designed to support desktop, tablet, and mobile screen sizes.
+The website provides feedback for different user actions.
 
-CSS Flexbox is used for parts of the layout such as the navigation bar, while CSS Grid is used for the project cards.
+**Project Search:**
 
-Media queries adjust the layout for smaller screen sizes. For example, the project cards appear side by side on larger screens and stack vertically on smaller screens.
+When a search produces no matching projects, the website displays:
 
-The navigation layout also adjusts on smaller screens to keep the links readable and accessible.
+> No projects found. Try a different keyword.
 
-Project images use `object-fit: contain` so the complete images remain visible when the screen size changes. This was added after testing showed that parts of the images could be cropped on smaller screens.
+**Contact Form:**
 
-## Testing
+- Empty required fields trigger browser validation.
+- Invalid email formats trigger browser validation.
+- Valid submissions display a confirmation message explaining that the form is a demonstration and no message was sent.
 
-The website was tested on both Safari and Google Chrome to check browser compatibility.
+These features help visitors understand the results of their actions.
 
-Responsive behavior was tested by resizing the browser window to represent desktop, tablet, and mobile screen sizes.
+## 8. Animations and Transitions
 
-Testing included:
+CSS transitions were added to the project cards to improve the user experience.
 
-- Navigation links
-- About Me, Projects, and Contact sections
-- Project image display
-- Responsive project card layout
-- Contact form required fields
-- Email input validation
-- JavaScript form interaction
-- GitHub and LinkedIn links
-- Layout behavior at different screen sizes
+When a visitor hovers over a project card:
 
-The website functioned correctly in both Safari and Google Chrome and adapted to different screen sizes without breaking the layout.
+- The card moves slightly upward.
+- A soft shadow appears.
+- The card smoothly returns to its original position when the mouse moves away.
 
-## Code Organization and Quality
+The animation uses CSS properties including:
 
-The project separates HTML, CSS, and JavaScript into different files to keep the code organized and maintainable.
+- `transition`
+- `transform`
+- `box-shadow`
 
-HTML is used for content and page structure, CSS is used for presentation and responsive layout, and JavaScript is used for interactive behavior.
+A `prefers-reduced-motion` media query is also included to reduce animation for visitors who prefer less motion.
 
-The code uses meaningful class and ID names, consistent formatting, and comments where appropriate. Unnecessary code was removed to keep the project simple and focused on the assignment requirements.
+## 9. Responsive Design
 
-## Version Control
+The website uses CSS Flexbox, CSS Grid, and media queries to adapt to different screen sizes.
 
-Git and GitHub were used for version control throughout the development process.
+On larger screens, project cards appear side by side. On smaller screens, they stack vertically.
 
-Changes were committed at meaningful stages of development, including project setup, implementation of portfolio features, responsive styling, JavaScript functionality, and documentation.
+The navigation layout and contact form also adapt to smaller screens.
 
-A `.gitignore` file is included to prevent unnecessary IntelliJ IDEA and operating system files from being tracked.
+Project images use `object-fit: contain` to remain fully visible when the screen size changes.
+
+## 10. Testing
+
+The website was tested in Safari and Google Chrome.
+
+Responsive behavior was checked by resizing the browser window to represent desktop, tablet, and mobile screen sizes.
+
+The following features were tested successfully:
+
+- Navigation between website sections.
+- Live project filtering using different keywords.
+- Empty search results message.
+- Restoring all projects when the search field is cleared.
+- Required field validation.
+- Invalid email validation.
+- Contact form confirmation and reset.
+- Project card hover animations.
+- Responsive layouts and project images.
+- Browser compatibility in Safari and Chrome.
+
+All tested features worked as expected.
+
+## 11. Code Organization and Quality
+
+The project separates HTML, CSS, and JavaScript into different files.
+
+The code uses meaningful element IDs, class names, and comments to improve readability.
+
+The JavaScript functionality is organized around event listeners that respond to visitor actions.
+
+The website uses lightweight front-end technologies without requiring additional frameworks or backend services.
+
+## 12. Version Control
+
+Git and GitHub were used to manage the project.
+
+Assignment 1 was used as the foundation, and new features were added through separate development stages.
+
+Meaningful commits document changes such as:
+
+- Initializing Assignment 2 from Assignment 1.
+- Adding live project search functionality.
+- Improving contact form feedback.
+- Adding project card animations.
+- Updating project documentation.
+
+AI assistance is credited in relevant commit messages.
