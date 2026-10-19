@@ -302,3 +302,18 @@ footer {
 #no-results[hidden] {
     display: none;
 }
+
+/* Contact form feedback */
+
+.success-message {
+    color: #246b45;
+    background-color: #e7f5ec;
+    border: 1px solid #b8dfc7;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#form-feedback:empty {
+    display: none;
+}
