@@ -263,3 +263,42 @@ footer {
         padding: 20px;
     }
 }
+
+/* Project search */
+
+.search-container {
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.search-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #234a75;
+}
+
+#project-search {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bfc8d1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#project-search:focus {
+    outline: 2px solid #315f8c;
+    outline-offset: 2px;
+}
+
+#no-results {
+    color: #9b3030;
+    margin-top: 15px;
+}
+
+/* Ensure hidden project cards stay hidden */
+.project-card[hidden],
+#no-results[hidden] {
+    display: none;
+}
