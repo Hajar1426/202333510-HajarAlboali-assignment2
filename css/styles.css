@@ -117,11 +117,19 @@ nav a:hover {
     gap: 30px;
 }
 
+/* Project card styling and hover animation */
 .project-card {
     background-color: white;
     padding: 30px;
     border-radius: 12px;
     border: 1px solid #d9e0e7;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(35, 74, 117, 0.12);
 }
 
 .project-card h3 {
@@ -316,4 +324,15 @@ footer {
 
 #form-feedback:empty {
     display: none;
+}
+
+/* Respect visitors who prefer reduced animation */
+@media (prefers-reduced-motion: reduce) {
+    .project-card {
+        transition: none;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
 }
