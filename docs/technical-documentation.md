@@ -14,7 +14,7 @@ The portfolio introduces me as a Software Engineering student, showcases my prev
 - **CSS3:** Styling, responsive layouts, and animations.
 - **JavaScript:** Dynamic content, form handling, and user interactions.
 - **Git and GitHub:** Version control and repository management.
-- **IntelliJ IDEA:** Development environment.
+- **IntelliJ IDEA:** Development environmentt.
 
 ## 3. Project Structure
 
